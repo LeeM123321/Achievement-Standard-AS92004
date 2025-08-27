@@ -98,6 +98,7 @@ def quiz():
             print("B: ",Q3I[2])
             print("C: ",Q3I[3])
             Guess = input("Please answer the question with A B or C: ").upper()
+            print()
             if Guess == Q3I[4]:
                 if i == 0:
                     _ = input("Thats correct! you have gained 1 point for getting it correct on your first try, press enter to continue.")
