@@ -1,4 +1,3 @@
-
 def quiz():
     
     
@@ -20,7 +19,7 @@ def quiz():
     while True:
         age = -1
         try:
-            age = int(input("Input Age: ")).strip()
+            age = int(input("Input Age: ").strip())
             if age < 100:
                 if age > 0:
                     if age > 13:
@@ -156,6 +155,4 @@ def quiz():
         
     #printing score
     print("you scored ", correctAnswers, " out of ", totalQuestions)
-                    
-
 quiz()
