@@ -12,7 +12,7 @@ def quiz():
     Q1I = ["Someone sends you a text that is hurtful and makes you feel bad about yourself. What should you do?","Delete the message and try to forget about it","Keep the text and show an adult you trust","Text the person back saying something mean to them","B"]
     Q2I = ["You find out that someone has posted an embarrassing picture of you online. What should you do?","Tweet that they are an idiot and a loser","Ask your friends to give the person a hard time","Tell an adult you trust","C"]
     Q3I = ["You want to join an online gaming site. Which of the following information is okay for you to post on the site.","A nickname","Your name","Your email address","A"]
-
+    print("\n" * 20)
     #getting username
     username = input("Input Username: ")
 
@@ -22,14 +22,17 @@ def quiz():
         try:
             age = int(input("Input Age: "))
             if age < 100:
-                if age > 13:
-                    input("You are older than the recommended age category, we recommend you try out our \"Cybersmart Youth Quiz\" if you wish to continue press enter")
+                if age > 0:
+                    if age > 13:
+                        input("You are older than the recommended age category, we recommend you try out our \"Cybersmart Youth Quiz\" if you wish to continue press enter")
+                    else:
+                        input("You are in the recommended age category, press enter to start.\n")
+                    print("\n" * 20)
+                    break
                 else:
-                    input("You are in the recommended age category, press enter to start.")
-                print("\n" * 20)
-                break
+                    print("Invalid age, Please only use numbers 1-100")
             else:
-                print("Invalid age, Please only use numbers 1-100")             
+                print("Invalid age, Please only use numbers 1-100")
         except ValueError:
             print("Invalid age, Please only use numbers 1-101")
 
@@ -46,28 +49,28 @@ def quiz():
         #checking the the input is a valid option
         while Guess not in Options:
             if firstGuess == 1:
-                print("invalid input, please try again")
+                print("invalid input, please try again.\n")
             firstGuess = 1
             Guess = input("Please answer the question with A B or C: ").upper()
 
         #checking if guess is correct and checking if it was on the first try
         if Guess == Q1I[4]:
             if i == 0:
-                input(f"Thats correct {username}! you have gained 1 point for getting it correct on your first try, press enter to continue.")
+                input(f"Thats correct {username}! you have gained 1 point for getting it correct on your first try, press enter to continue.\n")
                 correctAnswers += 1
                 print("\n" * 20)
                 break
             else:
-                input(f"Thats correct {username}! press enter to continue.")
+                input(f"Thats correct {username}! press enter to continue.\n")
                 print("\n" * 20)
                 break
             #checking if this is the 3rd time getting it wrong
         else:
                 if i == 2:
-                    input(f"Sorry that is incorrect, the correct answer was {Q1I[4]} and due to getting the question wrong three times in a row it will be skipped, please press enter to continue")
+                    input(f"Sorry that is incorrect, the correct answer was {Q1I[4]} and due to getting the question wrong three times in a row it will be skipped, please press enter to continue.\n")
                     print("\n" * 20)
                 else:
-                    input("Sorry that is incorrect, please press enter to try again")
+                    input("Sorry that is incorrect, please press enter to try again.\n")
                     print("\n" * 20)
         #resetting guess and first guess for next question
         firstGuess = 0
@@ -85,36 +88,36 @@ def quiz():
         #checking the the input is a valid option
         while Guess not in Options:
             if firstGuess == 1:
-                print("invalid input, please try again")
+                print("invalid input, please try again.\n")
             firstGuess = 1
             Guess = input("Please answer the question with A B or C: ").upper()
 
         #checking if guess is correct and checking if it was on the first try
         if Guess == Q2I[4]:
             if i == 0:
-                input(f"Thats correct {username}! you have gained 1 point for getting it correct on your first try, press enter to continue.")
+                input(f"Thats correct {username}! you have gained 1 point for getting it correct on your first try, press enter to continue.\n")
                 correctAnswers += 1
                 print("\n" * 20)
                 break
             else:
-                input(f"Thats correct {username}! press enter to continue.")
+                input(f"Thats correct {username}! press enter to continue.\n")
                 print("\n" * 20)
                 break
             #checking if this is the 3rd time getting it wrong
         else:
                 if i == 2:
-                    input(f"Sorry that is incorrect, the correct answer was {Q1I[4]} and due to getting the question wrong three times in a row it will be skipped, please press enter to continue")
+                    input(f"Sorry that is incorrect, the correct answer was {Q1I[4]} and due to getting the question wrong three times in a row it will be skipped, please press enter to continue.\n")
                     print("\n" * 20)
                 else:
-                    input("Sorry that is incorrect, please press enter to try again")
+                    input("Sorry that is incorrect, please press enter to try again.\n")
                     print("\n" * 20)
         #resetting guess and first guess for next question
         firstGuess = 0
         Guess = 0
                             
-    #asking question 1
+    #asking question 3
     for i in range(3):
-        #printing question 1
+        #printing question 3
         print(Q3I[0])
         print("A: ",Q3I[1])
         print("B: ",Q3I[2])
@@ -124,28 +127,28 @@ def quiz():
         #checking the the input is a valid option
         while Guess not in Options:
             if firstGuess == 1:
-                print("invalid input, please try again")
+                print("invalid input, please try again.\n")
             firstGuess = 1
             Guess = input("Please answer the question with A B or C: ").upper()
 
         #checking if guess is correct and checking if it was on the first try
         if Guess == Q3I[4]:
             if i == 0:
-                input(f"Thats correct {username}! you have gained 1 point for getting it correct on your first try, press enter to continue.")
+                input(f"Thats correct {username}! you have gained 1 point for getting it correct on your first try, press enter to continue.\n")
                 correctAnswers += 1
                 print("\n" * 20)
                 break
             else:
-                input(f"Thats correct {username}! press enter to continue.")
+                input(f"Thats correct {username}! press enter to continue.\n")
                 print("\n" * 20)
                 break
             #checking if this is the 3rd time getting it wrong
         else:
                 if i == 2:
-                    input(f"Sorry that is incorrect, the correct answer was {Q1I[4]} and due to getting the question wrong three times in a row it will be skipped, please press enter to continue")
+                    input(f"Sorry that is incorrect, the correct answer was {Q1I[4]} and due to getting the question wrong three times in a row it will be skipped, please press enter to continue.\n")
                     print("\n" * 20)
                 else:
-                    input("Sorry that is incorrect, please press enter to try again")
+                    input("Sorry that is incorrect, please press enter to try again.\n")
                     print("\n" * 20)
         #resetting guess and first guess for next question
         firstGuess = 0
