@@ -23,7 +23,7 @@ def quiz():
             if age < 100:
                 if age > 0:
                     if age > 13:
-                        input("You are older than the recommended age category, we recommend you try out our \"Cybersmart Youth Quiz\" if you wish to continue press enter")
+                        input("You are older than the recommended age category, we recommend you try out our \"Cybersmart Youth Quiz\" if you wish to continue press enter.\n")
                     else:
                         input("You are in the recommended age category, press enter to start.\n")
                     print("\n" * 20)
@@ -44,7 +44,7 @@ def quiz():
         print("B: ",Q1I[2])
         print("C: ",Q1I[3])
         #getting users guess and checking if its A B or C
-        
+        Guess = input("Please answer the question with A B or C: ").upper()
         #checking the the input is a valid option
         while Guess not in Options:
             if firstGuess == 1:
@@ -83,7 +83,7 @@ def quiz():
         print("B: ",Q2I[2])
         print("C: ",Q2I[3])
         #getting users guess and checking if its A B or C
-        
+        Guess = input("Please answer the question with A B or C: ").upper()
         #checking the the input is a valid option
         while Guess not in Options:
             if firstGuess == 1:
@@ -122,7 +122,7 @@ def quiz():
         print("B: ",Q3I[2])
         print("C: ",Q3I[3])
         #getting users guess and checking if its A B or C
-        
+        Guess = input("Please answer the question with A B or C: ").upper()
         #checking the the input is a valid option
         while Guess not in Options:
             if firstGuess == 1:
@@ -154,5 +154,5 @@ def quiz():
         Guess = 0
         
     #printing score
-    print("you scored ", correctAnswers, " out of ", totalQuestions)
+    print("good job ",username," you scored ", correctAnswers, " out of ", totalQuestions)
 quiz()
