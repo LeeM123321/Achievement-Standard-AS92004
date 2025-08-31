@@ -14,13 +14,13 @@ def quiz():
     Q3I = ["You want to join an online gaming site. Which of the following information is okay for you to post on the site.","A nickname","Your name","Your email address","A"]
     print("\n" * 20)
     #getting username
-    username = input("Input Username: ")
+    username = input("Input Username (Spaces will be removed): ").strip()
 
-    #checking if under correct age
+    #checking if valid age or above recommended age
     while True:
         age = -1
         try:
-            age = int(input("Input Age: "))
+            age = int(input("Input Age: ")).strip()
             if age < 100:
                 if age > 0:
                     if age > 13:
