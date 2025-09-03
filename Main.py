@@ -85,7 +85,7 @@ def quiz():
                     
     #asking question 2
     #looping for the 3 tries
-    for i in range(3):
+    for i in range(questionAttempts):
         #printing question 2
         print(Q2I[0])
         print("A: ",Q2I[1])
@@ -116,7 +116,7 @@ def quiz():
                 break
         else:
             #checking if this is the 3rd time getting it wrong or not
-                if i == 2:
+                if i == questionAttempts -1:
                     input(f"Sorry that is incorrect, the correct answer was {Q1I[4]} and due to getting the question wrong three times in a row it will be skipped, please press enter to continue.\n")
                     print("\n" * 20)
                 else:
@@ -127,7 +127,7 @@ def quiz():
                             
     #asking question 3
     #looping for the 3 tries
-    for i in range(3):
+    for i in range(questionAttempts):
         #printing question 3
         print(Q3I[0])
         print("A: ",Q3I[1])
@@ -158,7 +158,7 @@ def quiz():
                 break
         else:
             #checking if this is the 3rd time getting it wrong or not
-                if i == 2:
+                if i == questionAttempts -1:
                     input(f"Sorry that is incorrect, the correct answer was {Q1I[4]} and due to getting the question wrong three times in a row it will be skipped, please press enter to continue.\n")
                     print("\n" * 20)
                 else:
