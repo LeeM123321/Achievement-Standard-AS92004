@@ -1,5 +1,6 @@
 def quiz():
-    
+    invalidChar = ['!','@','#','$','%','^','&','*','(',')','-','_','=','+','*','/','\'','.',',','>','<','?','`','~']
+    invalid = False
     #setting default age and name
     age = -1    
     username = "N/A"
@@ -18,8 +19,20 @@ def quiz():
     Q2I = ["You find out that someone has posted an embarrassing picture of you online. What should you do?","Tweet that they are an idiot and a loser","Ask your friends to give the person a hard time","Tell an adult you trust","C"]
     Q3I = ["You want to join an online gaming site. Which of the following information is okay for you to post on the site.","A nickname","Your name","Your email address","A"]
     print("\n" * 20)
-    #getting username
+    #getting username and checking if valid
     username = input("Input Username: ").strip()
+    while True:
+        if len(username) > 10:
+            invalid = True
+        for i in range(len(username)):
+            if username[i] in invalidChar:
+                invalid = True
+        if invalid == True:
+            print("invalid username, please use 10 or less characters and avoid special characters \n")
+            username = input("Input Username: ").strip()
+            invalid = False
+        else:
+            break
 
     #checking is age meets all valid conditions (only contains numbers and is in the range of 1-100 inclusive)
     while True:
